@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Energeasy{% endblock %}</title>
+    {% block head %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'general/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/general.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/neon.css' %}">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    {% endblock %}
+</head>
+<body>
+    <div class="background"></div>
+    <div class="sidebar">
+        <br>
+        <br>
+        <div class="logo-details"> 
+            <img src="{% static 'logo.png' %}" alt="Logo" class="logo_image" id="logoImage" style="display:none;">
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <br>
+        <ul class="nav-list">
+            <li>
+                <a href="#" class="iconesLaterais">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Página inicial</span>
+                </a>
+                <span class="tooltip">Página inicial</span>
+            </li>
+            <li>
+                <a href="{%url 'clientes'%}" class="iconesLaterais"> 
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Clientes</span>
+                </a>
+                <span class="tooltip">Clientes</span>
+            </li>
+            <li>
+                <a href="{%url 'gerenciar'%}" class="iconesLaterais"> 
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Gerenciar Dispositivos</span>
+                </a>
+                <span class="tooltip">Gerenciar Dispositivos</span>
+            </li>
+            <li>
+                <a href="#" class="iconesLaterais"> 
+                    <i class='bx bx-laptop' ></i>
+                    <span class="links_name">Dispositivos cadastrados</span>
+                </a>
+                <span class="tooltip">Dispositivos cadastrados</span>
+            </li>
+            <li>
+                <a href="{%url 'gerencia'%}" class="iconesLaterais"> 
+                    <i class='bx bxs-info-circle' ></i>
+                    <span class="links_name">Sobre nós</span>
+                </a>
+                <span class="tooltip">Sobre nós</span>
+            </li>
+        </ul>
+    </div>
+    
+    {% block 'dashboard'%}
+        {% endblock %}
+       
+                {% csrf_token %}
+                
+            </form></div>
+    </section>
+    <section class="home-section">
+        
+    </section>
+    {%block 'body'%}
+    {%endblock%}
+    
+    
+    <script src="{% static 'general/js/base.js' %}"></script>
+    <script src="{% static 'jquery@3.5.1/dist/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

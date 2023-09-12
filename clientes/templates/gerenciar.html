@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% csrf_token %}
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'general/css/base.css' %}">
+{% endblock %}
+
+{% block 'dashboard' %}
+    
+    <div id="att_cliente">
+        <p></p>
+        <select id="dispositivo-select" onchange="dados_dispositivo()" class="form-control">
+            {% for dispositivo in dispositivos %}
+            <option value="{{ dispositivo.id }}">{{ dispositivo.marca }}</option>
+            {% endfor %}
+            
+        </select>
+        <br>
+        
+        </div>
+        <div id="conteudo" class="conteudo">
+            
+        </div>
+
+                    
+            </div>
+    </div>
+    <div id="form-att-cliente" class='form' enctype="multipart/form-data" style='display: none;'>
+        <form id="form-att-cliente" method="POST">{% csrf_token %}
+            
+            <input type="hidden" id="id">
+            <input id="potencia" type="text" name="potencia" class='attDisp' placeholder="Atualizar KHW">
+            <br>
+            <input id="tipo" type="text" name="tipo" class='attDisp' placeholder="Atualizar Tipo">
+            <br>
+            <input id="marca" type="text" name="marca" class='attDisp' placeholder="Atualizar Marca">
+            <br>
+            <input id="modelo" type="text" name="modelo" class='attDisp' placeholder="Atualizar Modelo">
+            <br>
+            <input id="icone" type="file" name="imagem" accept="image/*" class='attDisp' placeholder="Atualizar Icone">
+            <br>
+        </form>
+    </div>
+    
+    
+            
+    <script src="{% static 'clientes/js/clientes.js' %}"></script> 
+{% endblock %}
+{% block 'body' %}
+{% endblock %}
