@@ -1,7 +1,5 @@
 {
-  "routes": {
-    "/clientes/templates/:clientes": {
-      "src": "/clientes/templates/:clientes.html"
-    }
-  }
+  "routes": [
+    { "src": "/clientes/templates/(.*)", "dest": "/clientes/templates/$1.html" }
+  ]
 }
