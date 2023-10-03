@@ -1,0 +1,7 @@
+{
+  "routes": {
+    "/clientes/templates/:clientes": {
+      "src": "/clientes/templates/:clientes.html"
+    }
+  }
+}
