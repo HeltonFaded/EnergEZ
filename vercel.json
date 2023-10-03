@@ -1,5 +1,8 @@
 {
   "routes": [
-    { "src": "/clientes/templates/(.*)", "dest": "/clientes/templates/$1.html" }
+    {
+      "src": "/clientes/templates/gerenciar",
+      "dest": "/clientes/templates/gerenciar.html"
+    }
   ]
 }
