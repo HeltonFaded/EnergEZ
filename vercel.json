@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "src": "/clientes/templates/gerenciar",
-      "dest": "/clientes/templates/gerenciar.html"
-    }
-  ]
-}
