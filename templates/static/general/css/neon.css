@@ -64,7 +64,7 @@
     position: relative;
     width: 80px;
     height: 80px;
-    background-color: #7d0096e1;
+    background: linear-gradient(to top, #9500c7, #000000);
     color: whitesmoke;
     display: flex;
     border : solid 0.5px;
