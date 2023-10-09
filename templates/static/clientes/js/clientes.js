@@ -23,28 +23,67 @@ function dados_dispositivo() {
       conteudo = document.getElementById("conteudo");
       id = document.getElementById("id");
       id.value = data.idDisp;
-      conteudo.innerHTML += "<b>Tipo:</b>" + data.dispositivo.tipo + "<br>";
-      conteudo.innerHTML += "<b>Marca:</b>" + data.dispositivo.marca + "<br>";
-      conteudo.innerHTML += "<b>Modelo:</b>" + data.dispositivo.modelo + "<br>";
-      conteudo.innerHTML +="<b>Potência: </b>" + data.dispositivo.KHW + " KHW" + "<br>";
 
+      var conteudo = document.getElementById('conteudo');
+      var id = document.getElementById('id');
+      id.value = data.idDisp;
+      
+      var tituloElement = document.createElement('div');
+      tituloElement.style.textAlign = 'center';
+      tituloElement.innerHTML = 'Dispositivo Selecionado';
+      conteudo.appendChild(tituloElement);
+      
+      var imagemContainer = document.createElement('div');
+      imagemContainer.style.textAlign = 'center'; 
+      conteudo.appendChild(imagemContainer);
+      
       var imagemURL = "/media/" + data.dispositivo.icone;
-
       var imagemElement = document.createElement("img");
       imagemElement.style.width = "300px";
       imagemElement.style.height = "auto";
       imagemElement.style.border = "1px solid #ccc";
       imagemElement.style.marginTop = "10px";
-      imagemElement.style.alignContent = "center";
-
       imagemElement.src = imagemURL;
+      imagemContainer.appendChild(imagemElement);
       
-      conteudo.appendChild(imagemElement);
+      conteudo.appendChild(document.createElement('br'));
+      var primeiroParContainer = document.createElement('div');
+      primeiroParContainer.style.display = 'inline-block';
+      conteudo.appendChild(primeiroParContainer);
+      
+      var tipoElement = document.createElement('div');
+      tipoElement.className = 'infoDisp';
+      tipoElement.innerHTML = "<b>Tipo:</b> " + data.dispositivo.tipo;
+      primeiroParContainer.appendChild(tipoElement);
+      
+      var marcaElement = document.createElement('div');
+      marcaElement.className = 'infoDisp';
+      marcaElement.innerHTML = "<b>Marca:</b> " + data.dispositivo.marca;
+      primeiroParContainer.appendChild(marcaElement);
+      
+
+      var segundoParContainer = document.createElement('div');
+      segundoParContainer.style.display = 'inline-block';
+      conteudo.appendChild(segundoParContainer);
+      
+      var modeloElement = document.createElement('div');
+      modeloElement.className = 'infoDisp';
+      modeloElement.innerHTML = "<b>Modelo:</b> " + data.dispositivo.modelo;
+      segundoParContainer.appendChild(modeloElement);
+      
+      var potenciaElement = document.createElement('div');
+      potenciaElement.className = 'infoDisp';
+      potenciaElement.innerHTML = "<b>Potência:</b> " + data.dispositivo.KHW + " KHW";
+      segundoParContainer.appendChild(potenciaElement);
+      
+      
+      
+
 
       var excluir = document.createElement("button");
       excluir.id = "excluir";
       excluir.textContent = "Excluir";
-      excluir.classList.add("btn", "btn-danger", "excluir");
+      excluir.classList.add("btn", "excluir", "excluir-button");
       excluir.style.position = "relative";
       excluir.style.bottom = "10px";
       excluir.style.left = "10px";
