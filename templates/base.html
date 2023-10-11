@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'general/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'general/css/general.css' %}">
     <link rel="stylesheet" href="{% static 'general/css/neon.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/home.css' %}">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     {% endblock %}
 </head>
@@ -25,7 +26,7 @@
         <br>
         <ul class="nav-list">
             <li>
-                <a href="#" class="iconesLaterais">
+                <a href="{%url 'home'%}" class="iconesLaterais">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Página inicial</span>
                 </a>
@@ -79,5 +80,6 @@
     <script src="{% static 'general/js/base.js' %}"></script>
     <script src="{% static 'jquery@3.5.1/dist/jquery.slim.min.js' %}"></script>
     <script src="{% static 'bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js' %}"></script>
+    
 </body>
 </html>

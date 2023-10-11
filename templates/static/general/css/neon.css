@@ -11,7 +11,7 @@
     text-shadow: 0 0 8px hsla(0 0% 100% / 0.3), 0 0 32px;
     position: relative;
 }
-.iconesLaterais:before, .iconesLaterais:after {
+.iconesLaterais:hover:before, .iconesLaterais:hover:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -80,6 +80,8 @@
     animation: animarBorda 15s;
     background-repeat: repeat;
     background-position: 0%;
+    transition: background-color 1s ease, 
+    box-shadow 0.3s ease;
     
 }
 
@@ -90,8 +92,8 @@
     right: -3px;
 }
 
-.round-button::before,
-.round-button::after {
+.round-button:hover::before,
+.round-button:hover::after{
     content: "";
     position: absolute;
     z-index: -1;
@@ -102,7 +104,7 @@
     background-repeat: repeat;
     background-position: 100%;
     border-radius: 15px;
-    animation: animarBorda 8s linear infinite;
+    animation: animarBorda 4s linear infinite;
     border-radius: 50%;
 }
 
