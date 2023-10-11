@@ -9,8 +9,11 @@
 {% endblock %}
 
 {% block 'dashboard' %}
+<center>
 <div class="timeline-container" >
+    
     <div class="btns" >
+       
         <button class="round-button"onclick="moveCarousel(0)">
             <img src ="{%static 'img/iconesBTN/led.png'%}" class = "custom-icon" ></i> 
         </button>
@@ -32,7 +35,8 @@
 
     </div>
 </div>
-
+<h1 id ='titulo' class='info'></h1>
+</center>
 <div class="carousel-container">
 <img class="carousel-image" src="{% static 'img/carrossel/led.webp' %}" alt="led" data-descricao="led">
 <img class="carousel-image" src="{% static 'img/carrossel/inducao.jpg' %}" alt="carregar celular" data-descricao="inducao">
