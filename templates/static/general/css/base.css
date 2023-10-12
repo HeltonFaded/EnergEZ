@@ -331,15 +331,24 @@
 
 
 .cadastro{
-    margin-bottom:0px;
-    margin-left: 750px;
-    background-color: #470068;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 400px;
-    margin: 0 auto; 
-    
+  border: 1px solid;
+  border-image: linear-gradient(45deg, #ff00aa, #27b7f2);
+  border-image-slice: 1;
+  color: #ffffff;
+  padding: 20px;
+  margin: 10px auto;
+  width: 25%; 
+  text-align: center;
+  font-size: 1.5em;
+  background: linear-gradient(to bottom, #4a0063, #000000);
+  
+
+
+  @media (max-width: 767px) {
+      width: 90%; 
+      font-size: 1.2em; 
+      margin: 10px auto;
+  }
 }
 .alert{
 
@@ -366,8 +375,8 @@
 }
 select#dispositivo-select {
   font-family: "Raleway";
-  width: 1000px; 
-  height: 30px; 
+  width: 50%; 
+  height: 30%; 
   margin: 0 auto; 
   display: flex;
   align-items: center; 
@@ -375,32 +384,38 @@ select#dispositivo-select {
   background-color: rgba(0, 0, 0, 0.521);
   color: #ffffff; 
 }
-.form{
-  width: 1000px; 
-  height: 30px; 
+.form {
+  width: 50%; 
+  max-width: 100%; 
+  height: 30px;
   margin: 0 auto; 
   display: flex;
   align-items: center; 
   justify-content: center; 
-  
-  
 }
+
+
 
 .conteudo {
   border: 1px solid;
   border-image: linear-gradient(45deg, #ff00aa, #27b7f2);
-  color: #ffffff;
   border-image-slice: 1;
-  border-radius: 8px;
+  color: #ffffff;
   padding: 20px;
-  margin: 10px auto; 
-  width: 1000px; 
+  margin: 10px auto;
+  width: 50%; 
+  text-align: center;
+  font-size: 1.5em;
 
-	text-align: center;
-	font-size: 1.5em;
- 
-  
+
+
+  @media (max-width: 767px) {
+      width: 90%; 
+      font-size: 1.2em; 
+      margin: 10px auto;
+  }
 }
+
 
 
 
@@ -446,20 +461,21 @@ select#dispositivo-select {
 
 
 
-.attDisp{
-
-  width: 1000px; 
+.attDisp {
+  width: 90%; 
+  max-width: 50%; 
   height: 30px; 
   color: white;
   border-radius: 50px;
   border: 1px solid;
   margin: 0 auto; 
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.123);
-  
 }
+
+
 
 
 .infoDisp {
@@ -472,4 +488,42 @@ select#dispositivo-select {
   border-image: linear-gradient(45deg, #ff00aa, #27b7f2);
   box-shadow: 0 0 20px 0px  rgb(255, 3, 142);
   border: 1px solid;
+}
+.home {
+  max-width: 50%;
+
+  padding: 40px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .home {
+      
+      padding: 20px;
+      font-size: 16px;
+  }
+}
+
+
+
+.custom-file-input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.custom-file-label {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.cadastro_tabela{
+
+  width: 45%;
+
 }
