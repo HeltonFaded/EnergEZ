@@ -53,7 +53,7 @@
                 <p>
                     <label for="tipo">Tipo:</label>
                     <br>
-                    <select id="tipo" name="tipo">
+                    <select id="tipo" name="tipo" class ='cadastro_tabela'>
                         <option value="televisão">Televisão</option>
                         <option value="microondas">Microondas</option>
                         <option value="chuveiro">Chuveiro</option>
@@ -61,28 +61,31 @@
                     </select>
                 </p>
                 <p>
-                    <label for="nome">Gasto em KHW:</label>
+                    <label for="nome" class ='cadastro_tabela'>Gasto em KHW:</label>
                     <br>
-                    <input type="number" id="khw" name="khw" required>
+                    <input type="number" id="khw" name="khw" required class ='cadastro_tabela'>
                 </p>
                 <p>
-                    <label for="email">Marca:</label>
+                    <label for="email" class ='cadastro_tabela'>Marca:</label>
                     <br>
-                    <input type="text" id="marca" name="marca" required> 
+                    <input type="text" id="marca" name="marca" required class ='cadastro_tabela'> 
                 </p>
                 <p>
-                    <label for="senha">Modelo:</label>
+                    <label for="senha">Modelo:</label class ='cadastro_tabela'>
                     <br>
-                    <input type="text" id="modelo" name="modelo" required>
+                    <input type="text" id="modelo" name="modelo" required class ='cadastro_tabela'>
                 </p>
                 <p>
                     <label for="icone">Ícone:</label>
                     <br>
-                    <input type="file" id="icone" name="icone" accept="image/*" required>
+                    <input type="file" id="file-upload" name="file-upload" accept="image/*" class="custom-file-input">
+                    <label for="file-upload" style="cursor: pointer; background-color: rgb(0, 162, 255); #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Escolher imagem</label>
+                    
+
                 </p>
                 <p>
                     <br>
-                    <button type="submit" style="width: 100px;">Cadastrar</button>
+                    <button type="submit" style="width: 130px;">Cadastrar</button>
                 </p>
             </form>
         </div>
