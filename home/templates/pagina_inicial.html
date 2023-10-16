@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% csrf_token %}
+{% block 'head' %}
+
+    
+    
+{% endblock %}
+
+{% block 'dashboard' %}
+
+<body>
+  
+  
+    <div class="wrapper">
+      <main>
+        <section class="module parallax parallax-1">
+            
+            <img src="{% static 'logo.png' %}" alt="Logo" class="ngr_logo" id="logoImage" >
+          <h1 class='area-1'>Bem vindo ao Energeasy</h1>
+        </section>
+  
+        <section class="module content">
+          <div class="container">
+            <h2 class ='titulo'>Oque é o Energeasy?</h2>
+            <p class = 'texto'>
+                O Energeasy tem como missão principal simplificar o consumo de energia elétrica, capacitando os usuários a compreenderem o gasto de cada dispositivo. Nosso objetivo é proporcionar um maior controle sobre as contas de luz, permitindo que os usuários saibam exatamente quanto estão gastando em cada aparelho.
+            </p>
+            <p class = 'texto'>
+                Com a nossa plataforma intuitiva, não apenas oferecemos insights detalhados sobre o consumo de energia, mas também fornecemos orientações práticas para economizar. Com o Energeasy, você ganha não apenas conhecimento, mas também a capacidade de tomar decisões informadas para reduzir suas despesas de energia. Estamos aqui para simplificar e otimizar seu consumo de energia, colocando você no controle.
+            </p>          
+          </div>
+        </section>
+  
+        <section class="module parallax parallax-2">
+          <h1 class='area-2'>Aprenda e economize</h1>
+        </section>
+  
+        <section class="module content">
+          <div class="container">
+            <h2 class ='titulo2'>Simplificando o Consumo de Energia e Promovendo Conhecimento</h2>
+            <p class = 'texto2'>
+                No coração do Energeasy está o compromisso de não apenas facilitar a gestão do seu gasto na conta de luz, mas também proporcionar um entendimento profundo sobre as complexidades das matrizes energéticas. Exploramos desde as mais recentes tecnologias até produtos inovadores, tudo com o propósito de oferecer uma visão completa. Nosso objetivo é capacitá-lo a economizar de maneira inteligente e, ao mesmo tempo, melhorar significativamente sua qualidade de vida.
+            <p class = 'texto2'>
+                Ao fornecer informações detalhadas sobre as últimas tendências e avanços no mundo da energia, o Energeasy capacita você a fazer escolhas informadas. Não se trata apenas de economizar dinheiro, mas também de adotar práticas sustentáveis e eficientes. Com o Energeasy, você está dando os primeiros passos em direção a um futuro energético mais inteligente, econômico e ambientalmente consciente.
+            </p>          
+          </div>
+        </section>
+  
+        <section class="module parallax parallax-3">
+          <h1 class='area-3'>Tornar-se mais sustentável</h1>
+        </section>
+  
+        <section class="module content">
+          <div class="container">
+            <h2 class ='titulo3'>Transformando Seu Lar em um Espaço Sustentável</h2>
+            <p class = 'texto3'>
+                No Energeasy, nossa missão é transformar seu lar em um espaço sustentável, onde a eficiência energética se encontra com o conforto moderno. Oferecemos dicas práticas sobre como criar um ambiente residencial mais verde, desde a escolha dos eletrodomésticos até a implementação de sistemas de energia renovável.
+            </p>
+            <p class = 'texto3'>
+                Com soluções inteligentes e inovadoras, não apenas ajudamos você a economizar em suas contas de energia, mas também a reduzir sua pegada de carbono. Descubra como pequenas mudanças podem ter um impacto significativo, criando não apenas uma casa econômica, mas também um futuro mais sustentável para o nosso planeta. Estamos aqui para guiá-lo rumo a um estilo de vida mais ecológico e econômico, um passo de cada vez.
+            </p>          
+          </div>
+        </section>
+  
+      </main>
+    </div>
+  
+  </body>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="{% static 'home/js/home.js' %}"></script>
+
+{% endblock %}

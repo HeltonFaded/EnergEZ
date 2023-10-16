@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% csrf_token %}
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'general/css/consumo.css' %}">
+{% endblock %}
+
+{% block 'dashboard' %}
+
+
+   
+<center>  
+    <div id="selecao-cidade-estado">
+        <label for="cidade-estado" class ='info'>Escolha Seu estado:</label>
+        <select id="cidade-estado" class ='form-control'>
+            
+        </select>
+    </div>
+
+     
+<div id='grafico-de-barras-container' class='grafico-container'></div>
+<a>
+    <span id="download" onmouseover="this.style.cursor='pointer'" style="color: blue; text-decoration: underline;">Baixar PDF</span>
+</a>
+</center>
+
+<script src="{% static 'consumo/js/consumo.js' %}"></script> 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}

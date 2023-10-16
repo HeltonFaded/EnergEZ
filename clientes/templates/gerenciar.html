@@ -27,19 +27,20 @@
     </center>   
             </div>
     </div>
-    <div id="form-att-cliente" class='form' enctype="multipart/form-data" style='display: none;'>
+    <div id="form-att-cliente" class='form-control' enctype="multipart/form-data" style='display: none;'>
         <form id="form-att-cliente" method="POST">{% csrf_token %}
             
             <input type="hidden" id="id">
-            <input id="potencia" type="text" name="potencia" class='attDisp' placeholder="Atualizar KHW">
+            <input id="potencia" type="number" name="potencia" class='form-control' placeholder="Atualizar Potência (watts)" max="5000">
+
             <br>
-            <input id="tipo" type="text" name="tipo" class='attDisp' placeholder="Atualizar Tipo">
+            <input id="tipo" type="text" name="tipo" class='form-control' placeholder="Atualizar Tipo">
             <br>
-            <input id="marca" type="text" name="marca" class='attDisp' placeholder="Atualizar Marca">
+            <input id="marca" type="text" name="marca" class='form-control' placeholder="Atualizar Marca">
             <br>
-            <input id="modelo" type="text" name="modelo" class='attDisp' placeholder="Atualizar Modelo">
+            <input id="modelo" type="text" name="modelo" class='form-control' placeholder="Atualizar Modelo">
             <br>
-            <input id="icone" type="file" name="imagem" accept="image/*" class='attDisp' placeholder="Atualizar Icone">
+            <input id="icone" type="file" name="imagem" accept="image/*" class='form-control' placeholder="Atualizar Icone">
             <br>
         </form>
     </div>
