@@ -27,57 +27,57 @@ function dados_dispositivo() {
       var conteudo = document.getElementById('conteudo');
       var id = document.getElementById('id');
       id.value = data.idDisp;
-      
+
       var tituloElement = document.createElement('div');
       tituloElement.style.textAlign = 'center';
       tituloElement.innerHTML = 'Dispositivo Selecionado';
       conteudo.appendChild(tituloElement);
-      
+
       var imagemContainer = document.createElement('div');
-      imagemContainer.style.textAlign = 'center'; 
+      imagemContainer.style.textAlign = 'center';
       conteudo.appendChild(imagemContainer);
-      
+
       var imagemURL = "/media/" + data.dispositivo.icone;
       var imagemElement = document.createElement("img");
-      imagemElement.style.width = "300px";
+      imagemElement.style.width = "50%";
       imagemElement.style.height = "auto";
       imagemElement.style.border = "1px solid #ccc";
       imagemElement.style.marginTop = "10px";
       imagemElement.src = imagemURL;
       imagemContainer.appendChild(imagemElement);
-      
+
       conteudo.appendChild(document.createElement('br'));
       var primeiroParContainer = document.createElement('div');
       primeiroParContainer.style.display = 'inline-block';
       conteudo.appendChild(primeiroParContainer);
-      
+
       var tipoElement = document.createElement('div');
       tipoElement.className = 'infoDisp';
       tipoElement.innerHTML = "<b>Tipo:</b> " + data.dispositivo.tipo;
       primeiroParContainer.appendChild(tipoElement);
-      
+
       var marcaElement = document.createElement('div');
       marcaElement.className = 'infoDisp';
       marcaElement.innerHTML = "<b>Marca:</b> " + data.dispositivo.marca;
       primeiroParContainer.appendChild(marcaElement);
-      
+
 
       var segundoParContainer = document.createElement('div');
       segundoParContainer.style.display = 'inline-block';
       conteudo.appendChild(segundoParContainer);
-      
+
       var modeloElement = document.createElement('div');
       modeloElement.className = 'infoDisp';
       modeloElement.innerHTML = "<b>Modelo:</b> " + data.dispositivo.modelo;
       segundoParContainer.appendChild(modeloElement);
-      
+
       var potenciaElement = document.createElement('div');
       potenciaElement.className = 'infoDisp';
-      potenciaElement.innerHTML = "<b>Potência:</b> " + data.dispositivo.KHW + " KHW";
+      potenciaElement.innerHTML = "<b>Potência:</b> " + data.dispositivo.KHW + " Watts";
       segundoParContainer.appendChild(potenciaElement);
-      
-      
-      
+
+
+
 
 
       var excluir = document.createElement("button");
@@ -88,18 +88,18 @@ function dados_dispositivo() {
       excluir.style.bottom = "10px";
       excluir.style.left = "10px";
 
-      
+
       excluir.addEventListener("click", function () {
       var id = document.getElementById('id')
       console.log (id.value)
       var url = "/clientes/delete_disp/" + id.value;
-      
+
 
       window.location.href = url;
       });
-      
+
       conteudo.appendChild(excluir);
-      
+
 
       var atualizar = document.createElement("button");
       atualizar.id = "atualizar";
@@ -119,7 +119,7 @@ function dados_dispositivo() {
           formulario.style.display = "inline";
           formularioExibido = true;
         } else {
-          updateDispositivo(); 
+          updateDispositivo();
         }
       });
 
@@ -132,6 +132,8 @@ function dados_dispositivo() {
       var id = document.getElementById('id').value
     });
 }
+dados_dispositivo(1);
+
 
 function updateDispositivo() {
   var csrf_token = document.querySelector("[name=csrfmiddlewaretoken]").value;
@@ -159,7 +161,7 @@ function updateDispositivo() {
   .then(response => response.json())
   .then(data => {
     if (data.status === '200') {
-      
+
       window.location.href = '/clientes/';
   }
 

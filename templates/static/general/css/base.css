@@ -70,6 +70,7 @@
     position: relative;
     margin: 8px 0;
     list-style: none;
+    
   }
   .sidebar li .tooltip{
     position: absolute;
@@ -342,14 +343,10 @@
   font-size: 1.5em;
   background: linear-gradient(to bottom, #4a0063, #000000);
   
-
-
-  @media (max-width: 767px) {
-      width: 90%; 
-      font-size: 1.2em; 
-      margin: 10px auto;
-  }
 }
+  
+
+
 .alert{
 
   color: #000000; 
@@ -373,7 +370,7 @@
   font-weight: bold; 
   
 }
-select#dispositivo-select {
+.form-control{
   font-family: "Raleway";
   width: 50%; 
   height: 30%; 
@@ -382,19 +379,9 @@ select#dispositivo-select {
   align-items: center; 
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.521);
+  
   color: #ffffff; 
 }
-.form {
-  width: 50%; 
-  max-width: 100%; 
-  height: 30px;
-  margin: 0 auto; 
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-}
-
-
 
 .conteudo {
   border: 1px solid;
@@ -460,24 +447,6 @@ select#dispositivo-select {
 }
 
 
-
-.attDisp {
-  width: 90%; 
-  max-width: 50%; 
-  height: 30px; 
-  color: white;
-  border-radius: 50px;
-  border: 1px solid;
-  margin: 0 auto; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.123);
-}
-
-
-
-
 .infoDisp {
   width: 300px;
   height: 40px;
@@ -523,7 +492,25 @@ select#dispositivo-select {
     border-radius: 5px;
 }
 .cadastro_tabela{
-
+  font-size: 100%; 
   width: 45%;
-
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: auto;
+  font-size: 18px; 
+  margin-bottom: 10px;
+  height:auto;
+  border-radius: 50px;
+  height: 50px;
+  width: 70%;
+  text-align: center;
+}
+h1.cadastro_tabela {
+  font-size: 100%; 
+  font-family: Lato, sans-serif;
+  margin-bottom: 20px;
+  background-color: transparent;
+    
 }

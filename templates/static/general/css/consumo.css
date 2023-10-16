@@ -1,0 +1,102 @@
+.grafico-container {
+    width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+
+@-moz-document url-prefix() {
+    .grafico-container {
+        width: 100%;
+        #grafico-de-barras{
+            width: 0%;
+        }
+        
+    }
+}
+
+
+
+
+#grafico-de-barras {
+    width: 100%;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, #ff00aa, #27b7f2);
+    border-image-slice: 1;
+    color: #ffffff;
+    padding: 20px;
+    margin: 10px auto;
+    min-width: 50%;
+    height: auto;
+    text-align: center;
+    font-size: 1.5em;
+    background: linear-gradient(to bottom, #4a0063, #000000);
+}
+
+
+#grafico-de-barras .chartjs-bar-chart .chartjs-bar {
+    background-color: rgb(255, 255, 255);
+}
+
+#grafico-de-barras .chartjs-category-axis .chartjs-axis-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#grafico-de-barras .chartjs-category-axis .chartjs-tick {
+    font-size: 12px;
+    color: #0000ff;
+}
+
+#grafico-de-barras .chartjs-linear-axis .chartjs-axis-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #00ff00;
+}
+
+#grafico-de-barras .chartjs-linear-axis .chartjs-tick {
+    font-size: 10px;
+    color: #ff8000;
+}
+
+#grafico-de-barras .chartjs-legend {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#grafico-de-barras .chartjs-legend-item {
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+#grafico-de-barras .chartjs-legend-marker {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#grafico-de-barras .chartjs-legend-text {
+    font-weight: bold;
+}
+
+#grafico-de-barras .chartjs-tooltip {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+#grafico-de-barras .chartjs-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f30000;
+    text-align: center;
+    margin-bottom: 20px;
+}

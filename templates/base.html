@@ -7,10 +7,15 @@
     <title>{% block title %}Energeasy{% endblock %}</title>
     {% block head %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'general/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/base.css' %}" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="{% static 'general/css/noticias.css' %}" media="screen and (min-width: 600px)">
     <link rel="stylesheet" href="{% static 'general/css/general.css' %}">
     <link rel="stylesheet" href="{% static 'general/css/neon.css' %}">
-    <link rel="stylesheet" href="{% static 'general/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/consumo.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/Pagina_inicial.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css_mobile/baseMobile.css' %}" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="{% static 'general/css_mobile/noticiasMobile.css' %}" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="{% static 'general/css_mobile/neonMobile.css' %}" media="screen and (max-width: 599px)">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     {% endblock %}
 </head>
@@ -26,7 +31,7 @@
         <br>
         <ul class="nav-list">
             <li>
-                <a href="{%url 'home'%}" class="iconesLaterais">
+                <a href="{%url 'inicial'%}" class="iconesLaterais">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Página inicial</span>
                 </a>
@@ -34,32 +39,33 @@
             </li>
             <li>
                 <a href="{%url 'clientes'%}" class="iconesLaterais"> 
-                    <i class='bx bx-user' ></i>
-                    <span class="links_name">Clientes</span>
+                    <i class='bx bx-folder-plus'></i>
+                    <span class="links_name">Cadastrar dispositivo</span>
                 </a>
-                <span class="tooltip">Clientes</span>
+                <span class="tooltip">Cadastrar dispositivo</span>
             </li>
             <li>
                 <a href="{%url 'gerenciar'%}" class="iconesLaterais"> 
-                    <i class='bx bx-analyse'></i>
+                    <i class='bx bxs-devices'></i>
                     <span class="links_name">Gerenciar Dispositivos</span>
                 </a>
                 <span class="tooltip">Gerenciar Dispositivos</span>
             </li>
             <li>
-                <a href="#" class="iconesLaterais"> 
-                    <i class='bx bx-laptop' ></i>
-                    <span class="links_name">Dispositivos cadastrados</span>
+                <a href="{%url 'consumo'%}" class="iconesLaterais"> 
+                    <i class='bx bx-sort-up'></i>
+                    <span class="links_name">Veja seu consumo</span>
                 </a>
-                <span class="tooltip">Dispositivos cadastrados</span>
+                <span class="tooltip">Veja seu consumo</span>
             </li>
             <li>
-                <a href="{%url 'gerencia'%}" class="iconesLaterais"> 
-                    <i class='bx bxs-info-circle' ></i>
-                    <span class="links_name">Sobre nós</span>
+                <a href="{%url 'noticias'%}" class="iconesLaterais"> 
+                    <i class='bx bx-notepad'></i>
+                    <span class="links_name">Notícias e informações</span>
                 </a>
-                <span class="tooltip">Sobre nós</span>
+                <span class="tooltip">Notícias e informações</span>
             </li>
+
         </ul>
     </div>
     

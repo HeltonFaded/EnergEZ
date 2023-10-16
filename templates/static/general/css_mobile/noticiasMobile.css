@@ -1,0 +1,122 @@
+.carousel-container {
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0px;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, #ff00aa, #00eeff); 
+    border-image-slice: 1; 
+    margin-top: 0px;
+    
+}
+
+.custom-icon {
+    display: inline-block;
+    height: auto; 
+    max-height: 36px; 
+    background-size: cover;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+}
+
+
+.info {
+
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 60%; 
+    padding: 10px; 
+    display: inline-block;
+    width: 100%;
+    
+    margin-top: 17px;
+
+}
+
+.cabecalio{
+    font-size: 15px;
+    margin-top: 0px;
+
+
+}
+@media (max-width: 767px) {
+    .carousel-container {
+        max-width: 100%;
+    }
+    
+
+    .carousel-image {
+        height: auto;
+    }
+}
+
+.round-button-home {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to top, #9500c7, #000000);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.5px;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    box-shadow: inset 0 0 16px 0 rgb(175, 4, 132);
+    text-shadow: 0 0 4px hsla(0 0% 100% / 0.3), 0 0 16px;
+    position: relative;
+    background-repeat: repeat;
+    background-position: 0%;
+    transition: background-color 1s ease, box-shadow 0.3s ease;
+    position: relative; 
+}
+
+.round-button-home::after,
+.round-button-home::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border-radius: 50%;
+}
+
+.round-button-home::after {
+    filter: blur(8px);
+    bottom: -3px;
+    right: -3px;
+}
+
+.round-button-home::before {
+    top: -3px;
+    left: -3px;
+    filter: blur(8px);
+}
+
+.round-button-home:hover::before,
+.round-button-home:hover::after {
+    background: linear-gradient(45deg, #ff00aa, #ff00aa, #ff00aa, #27b7f2, #27b7f2, #27b7f2, #ff00aa, #ff00aa, #ff00aa, #27b7f2, #27b7f2, #27b7f2);
+    background-size: 200% 200%;
+    background-repeat: repeat;
+    background-position: 100%;
+    animation: animarBorda 4s linear infinite;
+}
+
+
