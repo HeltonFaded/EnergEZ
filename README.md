@@ -25,12 +25,19 @@ Após a instalação, siga estas etapas para utilizar o Energeasy:
 Aqui está um exemplo de código utilizado no projeto:
 
 ```python
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Usuario
-from django.urls import reverse
-from django.core import serializers
-from .serializers import UsuarioSerializer, UsuarioupdateSerializer
-from rest_framework.renderers import TemplateHTMLRenderer
-from rest_framework.response import Response
-from rest_framework import status, generics
-from django.views.decorators.csrf import csrf_exempt
+def clientes(request):
+    if request.method == "GET":
+        return render(request, 'clientes.html')
+    
+    elif request.method == "POST":
+        KHW = request.POST.get('khw')
+        marca = request.POST.get('marca')
+        modelo = request.POST.get('modelo')
+        icone = request.FILES.get('icone')
+        tipo = request.POST.get('tipo')
+
+        disp = Dispositivos(KHW=KHW, marca=marca, modelo=modelo, icone=icone, tipo=tipo)
+        disp.save()
+        messages.success(request, 'Dispositivo cadastrado com sucesso',extra_tags='success-message')
+        return render(request, 'clientes.html', {'disp': disp})
+
