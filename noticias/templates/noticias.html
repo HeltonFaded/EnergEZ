@@ -1,17 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% csrf_token %}
-{% block 'head' %}
- <!-- CSS para Desktop -->   
-<link rel="stylesheet" href="{% static 'general/css/base.css' %}" media="screen and (min-width: 600px)">
-<link rel="stylesheet" href="{% static 'general/css/noticias.css' %}" media="screen and (min-width: 600px)">
-
-<!-- CSS para dispositivos móveis -->
-<link rel="stylesheet" href="{% static 'general/css_mobile/baseMobile.css' %}" media="screen and (max-width: 599px)">
-<link rel="stylesheet" href="{% static 'general/css_mobile/noticiasMobile.css' %}" media="screen and (max-width: 599px)">
-    
-{% endblock %}
-
 {% block 'dashboard' %}
 <center>  
 <main class='noticias'>
