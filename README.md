@@ -1,11 +1,36 @@
-# EnergEZ
-projeto de cadastro de dispositivos e monitoramento energetico 
+# Energeasy
 
-video da aplicação em funcionamento até então > https://github.com/HeltonFaded/EnergEZ/assets/144186013/6f2608f9-626b-486a-93a1-9d45df5fe683
+Energeasy é um projeto desenvolvido por Helton dos Santos França, com contribuições de Vinícius Marques Ribeiro, somos orientados e mentorados pelo Prof. MSc. Cloves Rocha.
+- Nosso objetivo conscientizar os usuários sobre diferentes conceitos de energia, incluindo elétrica, nuclear e solar. 
+- Além disso, o projeto visa desmistificar informações errôneas sobre energia, permitir o cadastro de dispositivos e realizar cálculos de economia de energia.
 
-video da aplicação em funcionamento atualizado -> (home, cadastro e atualização de dispositivos)->https://github.com/HeltonFranca/EnergEZ/assets/144186013/9d8c80d3-1006-4ccd-a965-ec9943212ee4
+## Instalação
 
-video da aplicação em funcionamento atualizado continuação (grafico, download de pdf e aba de noticias) ->  https://github.com/HeltonFranca/EnergEZ/assets/144186013/a3210a6a-dd0f-46fb-8050-ec6e1f46455c
+Para instalar o Energeasy, siga estas etapas:
 
+1. Clone este repositório.
+2. Certifique-se de ter o Python e o Django instalados.
+3. Execute o comando `pip install -r requirements.txt` para instalar as dependências.
 
-Link para acessar -> http://heltonfranca.pythonanywhere.com
+## Uso
+
+Após a instalação, siga estas etapas para utilizar o Energeasy:
+
+1. Execute o servidor Django localmente.
+2. Acesse o aplicativo através do navegador da web.
+3. Cadastre os dispositivos e explore os recursos disponíveis para aprender sobre diferentes formas de energia e calcular a economia de energia.
+
+## Exemplo de Código
+
+Aqui está um exemplo de código utilizado no projeto:
+
+```python
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Usuario
+from django.urls import reverse
+from django.core import serializers
+from .serializers import UsuarioSerializer, UsuarioupdateSerializer
+from rest_framework.renderers import TemplateHTMLRenderer
+from rest_framework.response import Response
+from rest_framework import status, generics
+from django.views.decorators.csrf import csrf_exempt
