@@ -8,14 +8,18 @@
     <section class="home-section">
   
         {% block 'body' %}
+   
             <div class="container">
                 <div class="row">
+                    
                     <div class="col-md">
                         {% if messages %}
                             {% for message in messages %}
+                            <center>
                                 <div class="alert {% if 'success' in message.tags %}alert-success{% elif 'error' in message.tags %}alert-danger{% endif %} custom-success-alert" role="alert">
                                     {{ message }}
                                 </div>
+                            </center>
                             {% endfor %}
                             <script>
                                 setTimeout(function() {
@@ -23,12 +27,13 @@
                                     messages.forEach(function(message) {
                                         message.remove();
                                     });
-                                }, 1000);
+                                },1000);
                             </script>
                         {% endif %}
                     </div>
                 </div>
             </div>
+       
         {% endblock %}
         <center>
         <div class="btns">

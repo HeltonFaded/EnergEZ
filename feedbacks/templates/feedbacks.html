@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+{% csrf_token %}
+{% block 'head' %}
+{% endblock %}
+
+{% block 'dashboard' %}
+    <center class='info'>
+        <h1 class='cabecalio'>Feedback do Usuário</h1>
+        
+        <form method="post" action="{% url 'feedback' %}">
+            {% csrf_token %}
+        
+            <h2>Você gostou do visual do site?</h2>
+            <label>
+                <input type="radio" name="visual" value="Sim"> Sim
+            </label>
+            <label>
+                <input type="radio" name="visual" value="Não"> Não
+            </label>
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="visualChart" class='grafico-feedback'></canvas>
+            </div>
+
+            <h2>O aplicativo está otimizado no seu dispositivo?</h2>
+            <label>
+                <input type="radio" name="otimizado" value="Sim"> Sim
+            </label>
+            <label>
+                <input type="radio" name="otimizado" value="Não"> Não
+            </label>
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="otimizadoChart" class='grafico-feedback'></canvas>
+            </div>
+
+            <h2>Como você avalia a intuitividade do site?</h2>
+            <label>
+                <input type="radio" name="intuitividade" value="Ótima"> Ótima
+            </label>
+            <label>
+                <input type="radio" name="intuitividade" value="Boa"> Boa
+            </label>
+            <label>
+                <input type="radio" name="intuitividade" value="Razoável"> Razoável
+            </label>
+            <label>
+                <input type="radio" name="intuitividade" value="Confuso"> Confuso
+            </label>
+            <label>
+                <input type="radio" name="intuitividade" value="Muito Confuso"> Muito Confuso
+            </label>
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="intuitividadeChart" class='grafico-feedback'></canvas>
+            </div>
+
+            <h2>Como você avalia a proposta do site?</h2>
+            <label>
+                <input type="radio" name="proposta" value="Muito Boa"> Muito Boa
+            </label>
+            <label>
+                <input type="radio" name="proposta" value="Boa"> Boa
+            </label>
+            <label>
+                <input type="radio" name="proposta" value="Indiferente"> Indiferente
+            </label>
+            <label>
+                <input type="radio" name="proposta" value="Ruim"> Ruim
+            </label>
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="propostaChart" class='grafico-feedback'></canvas>
+            </div>
+
+            <h2>Qual seu Perfil Residencial?</h2>
+            <label>
+                <input type="radio" name="perfil" value="Casa"> Casa
+            </label>
+            <label>
+                <input type="radio" name="perfil" value="Apartamento"> Apartamento
+            </label>
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="perfilChart" class='grafico-feedback'></canvas>
+            </div>
+
+            <h2>Número de Moradores?</h2>
+            <label>
+                <input type="radio" name="moradores" value="1"> 1
+            </label>
+            <label>
+                <input type="radio" name="moradores" value="2-4"> 2-4
+            </label>
+            <label>
+                <input type="radio" name="moradores" value="5 ou mais"> 5 ou mais
+            </label>
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="moradoresChart" class='grafico-feedback'></canvas>
+            </div>
+
+            <h2>Você sabe o seu gasto em energia?</h2>
+            <label>
+                <input type="radio" name="gasto" value="Sim, e estou satisfeito"> Sim, e estou satisfeito
+            </label>
+            <label>
+                <input type="radio" name="gasto" value="Sim, e não estou satisfeito"> Sim, e não estou satisfeito
+            </label>
+            <label>
+                <input type="radio" name="gasto" value="Não sei meu gasto em energia elétrica"> Não sei meu gasto em energia elétrica
+            </label>
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="gastoChart" class='grafico-feedback'></canvas>
+            </div>
+            <input type="text" name="nomeUsuario" id="nomeUsuario" class='cadastro_tabela' style="width: 10%; margin: auto;" placeholder ='como você se chama?'required>
+            <br>
+            <button type="submit" id="botao-envio" class="btn btn-success">Enviar Feedback</button>
+        </form>
+
+        <script src="{% static 'feedback/js/feedback.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                initializeFeedbackCharts();
+            });
+        </script>
+    </center>
+{% endblock %}
