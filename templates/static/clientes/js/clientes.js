@@ -103,7 +103,7 @@ function dados_dispositivo() {
 
       var atualizar = document.createElement("button");
       atualizar.id = "atualizar";
-      atualizar.textContent = "Atualizar";
+      atualizar.textContent = "Alterar";
       atualizar.type = "submit";
       atualizar.classList.add("btn", "btn-success", "atualizar");
       atualizar.style.position = "relative";

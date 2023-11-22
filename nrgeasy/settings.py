@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'clientes',
     'noticias',
     'consumo',
-    'home'
+    'home',
+    'feedbacks'
 ]
 
 MIDDLEWARE = [

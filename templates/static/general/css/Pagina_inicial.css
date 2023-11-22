@@ -5,6 +5,7 @@ body{
     font-family: sans-serif;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    
   }
   
   h2,h3,h4,h5,h6{
@@ -13,6 +14,7 @@ body{
     font-family: Lato, sans-serif;
     margin-bottom: 20px;
     background-color: transparent;
+    
   }
   
   .wrapper{
@@ -89,6 +91,21 @@ body{
   section.module.parallax-3{
     background-image: url("https://conecta.tec.mx/sites/default/files/styles/header_full/public/2021-02/top-energy-una-alternativa-en-energias-verdes.jpg?h=920929c4&itok=wPnRvFyV");
   }
+
+  section.module.parallax-4{
+    background-image: url("https://4kwallpapers.com/images/wallpapers/neon-light-ring-huawei-mediapad-stock-4480x2520-716.jpg");
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section.module.parallax-5{
+    background-image: url("https://www.avilaurbanismo.com.br/wp-content/uploads/2022/10/bloggif_633aeed0618fa.jpeg");
+  }
+  
+  section.module.parallax-6{
+    background-image: url("https://conecta.tec.mx/sites/default/files/styles/header_full/public/2021-02/top-energy-una-alternativa-en-energias-verdes.jpg?h=920929c4&itok=wPnRvFyV");
+  }
+  
   
   section.module.parallax h1{
     color: #FFF;
@@ -97,6 +114,8 @@ body{
     z-index: 50;
     font-family: Lato, sans-serif;
     align-content: center;
+    
+    
   }
   .ngr_logo{
 
@@ -121,11 +140,17 @@ body{
   
     section.module.parallax h1 {
       font-size: 36px;
+      
     }
   }
 
   .area-1, .area-2,.area-3,.ngr_logo,.titulo,.titulo2,.titulo3,.texto,.texto2,.texto3{
     text-shadow: -1px -1px 0 rgb(177, 177, 177);
     visibility: hidden;
+    
+  }
+
+  section.module.content{
+    
   }
   

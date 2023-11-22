@@ -352,7 +352,6 @@
   color: #000000; 
   width: 300px;
   padding: 10px; 
-  margin-left: 400px;
   margin-bottom: 10px; 
   border-radius: 5px; 
   font-weight: bold;
@@ -364,7 +363,6 @@
   color: black; 
   width: 300px;
   padding: 10px; 
-  margin-left: 400px;
   margin-bottom: 10px; 
   border-radius: 5px; 
   font-weight: bold; 
@@ -513,4 +511,7 @@ h1.cadastro_tabela {
   margin-bottom: 20px;
   background-color: transparent;
     
+}
+.cabecalio{
+  font-size: 66px;
 }
